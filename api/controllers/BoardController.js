@@ -49,14 +49,14 @@ module.exports = {
           Note
             .destroy({boardId: req.param("boardId")})
             .then(() => {
-              res.ok()
+              //res.ok()
             }, (e) => {
               res.badRequest(e);
             })
           Board
             .destroy({id: req.param("boardId")})
-            .then(() => {
-                res.ok()
+            .then((deletedBoards) => {
+                res.ok(deletedBoards)
             }, (e) => {
               res.badRequest(e);
             })
