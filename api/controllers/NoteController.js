@@ -58,7 +58,7 @@ module.exports = {
             if (e) {
               return res.serverError(e);
             } else {
-                return res.ok();
+                return res.ok(foundNote);
             }
           });
         } else {
@@ -79,7 +79,7 @@ module.exports = {
             if (e) {
               return res.serverError(e);
             } else {
-                return res.ok();
+                return res.ok(foundNote);
             }
           });
         } else {
